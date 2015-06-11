@@ -1,0 +1,23 @@
+{
+  "name": "@surge/example-jekyll",
+  "version": "0.1.0",
+  "description": "An example Jekyll project that can be published to Surge.",
+  "homepage": "https://surge.sh",
+  "repository": "https://github.com/surge-sh/example-jekyll.git",
+  "license": "MIT",
+  "private": true,
+  "author": "Kenneth Ormandy <kenneth@surge.sh> (http://kennethormandy.com)",
+  "contributors": [
+    "Kenneth Ormandy <kenneth@surge.sh> (http://kennethormandy.com)",
+    "Brock Whitten   <brock@surge.sh>   (http://sintaxi.com)"
+  ],
+  "keywords": ["surge", "surge.sh", "example", "jekyll", "ruby", "static"],
+  "devDependencies": {
+    "surge": "latest"
+  },
+  "scripts": {
+    "post-install": "bundle install",
+    "compile": "jekyll build",
+    "deploy": "npm run compile && surge --project ./_site --domain example-jekyll.surge.sh"
+  }
+}
